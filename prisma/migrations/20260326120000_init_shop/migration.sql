@@ -1,0 +1,17 @@
+-- CreateTable
+CREATE TABLE `Product` (
+  `id` INTEGER NOT NULL AUTO_INCREMENT,
+  `slug` VARCHAR(120) NOT NULL,
+  `name` VARCHAR(120) NOT NULL,
+  `price` DECIMAL(10, 2) NOT NULL,
+  `coverImage` VARCHAR(255) NOT NULL,
+  `summary` VARCHAR(255) NOT NULL,
+  `content` TEXT NOT NULL,
+  `stock` INTEGER NOT NULL DEFAULT 0,
+  `status` ENUM('DRAFT', 'PUBLISHED') NOT NULL DEFAULT 'PUBLISHED',
+  `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+  `updatedAt` DATETIME(3) NOT NULL,
+
+  UNIQUE INDEX `Product_slug_key`(`slug`),
+  PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
