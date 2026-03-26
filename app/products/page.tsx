@@ -20,7 +20,7 @@ export default async function ProductsPage() {
           </div>
           <aside className="hero-panel">
             <strong>当前实现范围</strong>
-            <p>基于 Next.js App Router 直接读取 MySQL 数据，不额外拆 API 层。你可以在此基础上继续加购物车、分类和后台管理。</p>
+            <p>现在已经支持前台购物车，商品可从列表页和详情页直接加入，本地保存状态，便于先看完整浏览和加购体验。</p>
           </aside>
         </div>
       </section>
@@ -45,10 +45,10 @@ export default async function ProductsPage() {
       </section>
 
       <footer style={{ paddingBottom: "48px", color: "var(--muted)" }}>
-        详情页路由格式示例：
+        当前支持商品浏览、详情查看和购物车管理：
         {" "}
-        <Link href={products[0] ? `/products/${products[0].slug}` : "/products"}>
-          {products[0] ? `/products/${products[0].slug}` : "/products/[slug]"}
+        <Link href="/cart">
+          /cart
         </Link>
       </footer>
     </main>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 import type { Product } from "@/lib/mock-products";
 import { formatPrice, getProductAvailability } from "@/lib/products";
 
@@ -20,9 +21,12 @@ export function ProductCard({ product }: { product: Product }) {
         <p className="card-summary">{product.summary}</p>
         <span className={`badge ${availability.className}`}>{availability.label}</span>
 
-        <Link className="card-link" href={`/products/${product.slug}`}>
-          查看详情
-        </Link>
+        <div className="card-actions">
+          <Link className="card-link" href={`/products/${product.slug}`}>
+            查看详情
+          </Link>
+          <AddToCartButton productId={product.id} stock={product.stock} variant="secondary" />
+        </div>
       </div>
     </article>
   );
