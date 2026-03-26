@@ -15,7 +15,7 @@ export function SiteHeader() {
           <span className="site-brand-mark">SM</span>
           <span>
             <strong>Studio Market</strong>
-            <small>Objects for quiet rooms</small>
+            <small>Soft objects, bright mood</small>
           </span>
         </Link>
 

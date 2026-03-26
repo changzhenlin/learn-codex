@@ -28,11 +28,12 @@ export default async function ProductDetailPage({
     .filter(Boolean);
 
   return (
-    <main className="page-shell">
-      <section className="hero" style={{ paddingBottom: 0 }}>
+    <main className="detail-page">
+      <section className="detail-lead">
         <Link className="back-link" href="/products">
           返回商品列表
         </Link>
+        <span className="detail-lead-note">Soft blue shop edit</span>
       </section>
 
       <section className="detail-layout">
@@ -52,6 +53,17 @@ export default async function ProductDetailPage({
           <p className="detail-summary" style={{ marginTop: "20px" }}>
             {product.summary}
           </p>
+
+          <div className="detail-spotlight">
+            <div className="detail-spotlight-item">
+              <strong>适合空间</strong>
+              <span>卧室、客厅、书桌角落等需要一点明亮情绪的区域。</span>
+            </div>
+            <div className="detail-spotlight-item">
+              <strong>气质关键词</strong>
+              <span>轻盈、温柔、带一点年轻感，不会压住整体空间。</span>
+            </div>
+          </div>
 
           <div className="detail-actions">
             <AddToCartButton productId={product.id} stock={product.stock} />

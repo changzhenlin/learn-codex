@@ -8,9 +8,9 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <article className="card">
-      <div className="card-media">
+      <Link className="card-media" href={`/products/${product.slug}`}>
         <img src={product.coverImage} alt={product.name} />
-      </div>
+      </Link>
 
       <div className="card-body">
         <div className="card-title-row">

@@ -5,11 +5,11 @@ export default function CartPage() {
     <main className="page-shell">
       <section className="hero">
         <p className="eyebrow">Studio Market Cart</p>
-        <div className="hero-grid">
+        <div>
           <div>
-            <h1 className="hero-title">把想买的单品先收进同一个清单。</h1>
+            <h1 className="hero-title">把喜欢的单品先存进一份轻快清单。</h1>
             <p className="hero-copy">
-              购物车以本地状态保存，方便你在列表页和详情页之间来回比较，再统一决定数量与预算。
+              购物车仍然使用本地状态保存，但整体视觉已经切到浅蓝和浅粉主调，方便你直接体验更完整的浏览和加购氛围。
             </p>
           </div>
         </div>
