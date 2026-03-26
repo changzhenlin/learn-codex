@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 import { formatPrice, getProductAvailability, getProductBySlug } from "@/lib/products";
 
 export const dynamic = "force-dynamic";
@@ -51,6 +52,13 @@ export default async function ProductDetailPage({
           <p className="detail-summary" style={{ marginTop: "20px" }}>
             {product.summary}
           </p>
+
+          <div className="detail-actions">
+            <AddToCartButton productId={product.id} stock={product.stock} />
+            <Link className="cta-link subtle" href="/cart">
+              查看购物车
+            </Link>
+          </div>
 
           <div className="rich-text">
             <h3>商品详情</h3>
