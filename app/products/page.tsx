@@ -50,6 +50,8 @@ export default async function ProductsPage() {
         <Link href={products[0] ? `/products/${products[0].slug}` : "/products"}>
           {products[0] ? `/products/${products[0].slug}` : "/products/[slug]"}
         </Link>
+        {" · "}
+        <Link href="/users/mia-chen">/users/mia-chen</Link>
       </footer>
     </main>
   );
